@@ -1,4 +1,5 @@
 import express from "express";
+import bodyParser from "body-parser";
 import appconfig from "./appconfig.js"
 import user from "./user.js"
 const app = express();
@@ -18,7 +19,11 @@ app.get("/", (req, res) => {
 });
 
 app.post("/register", (req, res) => {
-  res.send("hello");
+  console.log(req);
+
+  users.push()
+
+  res.send(users);
 });
 
 app.get("/list", (req, res) => {
