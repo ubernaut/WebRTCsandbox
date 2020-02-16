@@ -1,0 +1,16 @@
+{
+  "name": "web-rtc-hub",
+  "version": "1.0.0",
+  "description": "hub for connecting clients via webrtc",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": " node --experimental-modules app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
