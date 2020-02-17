@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import appconfig from "./appconfig.js"
 import user from "./user.js"
 const app = express();
-
+app.use(express.urlencoded());
 console.log(appconfig)
 
 const users = []
@@ -19,9 +19,10 @@ app.get("/", (req, res) => {
 });
 
 app.post("/register", (req, res) => {
-  console.log(req);
-
-  users.push()
+  console.log(req.body);
+  let ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+  let newUser = user(req.body.username, ip)
+  users.push(newUser)
 
   res.send(users);
 });
