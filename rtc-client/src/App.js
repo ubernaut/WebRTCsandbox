@@ -7,7 +7,6 @@ import config from './config.js';
 
 function App() {
   const register = "http://"+config.host+":"+config.port+config.path;
-  postData();
   return (
     <div className="App">
       <header className="App-header">
