@@ -1,5 +1,5 @@
 const server = {
-  host:"192.168.86.214",
+  host:"localhost",
   port:"3030",
   path:"/register"
 }
